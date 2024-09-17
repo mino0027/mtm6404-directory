@@ -29,7 +29,8 @@ function order(clients, property) {
 // this is followed by if b is less than a and it will give a new value.
 
 /*Create an total function. It will take one argument (an array of clients) and return a number. The number will be total sum of the balances from every client. The reduce() method with an arrow function should be used.*/
-function total(clients) {
+//forgot to use the arrow function, need to redo this
+/* function total(clients) {
     let totalBalance = 0;
     // go through each client in the clients array
     for (let i = 0; i < clients.length; i++) {
@@ -44,4 +45,4 @@ function total(clients) {
     }
     // gives you the total balance
     return totalBalance;
-}
+} */
