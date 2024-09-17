@@ -1,12 +1,23 @@
 /*Create a list function. It will take one argument (an array of clients) and return an HTML string. The string will contain a list item template (shown below) for each client in the array. The map() method with an arrow function should be used.*/
 //<!-- List Item Template -->
-
 /*
 <li class="list-group-item d-flex justify-content-between" data-index="<!-- Replace with client's index -->">
   <!-- Replace with client's name -->
   <strong>$ <!-- Replace with client's balance--></strong>
 </li>
 */
+
+//forgot to do this first, will do now.
+function list(clients) { //this function will take an array of clients.
+    return clients.map(client => `
+        <li class="list-group-item d-flex justify-content-between" data-index="${client.index}">
+            ${client.name}
+            <strong>$ ${client.balance}</strong>
+        </li> 
+    `).join(''); //this will return a list item template for each client in the array.
+    //this will join the array into a string.
+}
+
 
 /*Create an order function. It will take two arguments (an array of clients, a string of a property in the client object) and return an array of clients sorted by a specified property. The sort() method with an arrow function should be used.*/
 function order(clients, property) {
