@@ -28,3 +28,20 @@ function order(clients, property) {
 // the question mark is a ternary operator and it is used to return a value based on a condition. the condition is if a is greater than b.
 // this is followed by if b is less than a and it will give a new value.
 
+/*Create an total function. It will take one argument (an array of clients) and return a number. The number will be total sum of the balances from every client. The reduce() method with an arrow function should be used.*/
+function total(clients) {
+    let totalBalance = 0;
+    // go through each client in the clients array
+    for (let i = 0; i < clients.length; i++) {
+        // getting the balance of the client
+        const balance = clients[i].balance;
+        // removes stuff from the balance like $ and such
+        const numericBalance = balance.replace(/[^0-9.-]+/g,"");
+        // converts the balance to a number (string to number)
+        const balanceNumber = parseFloat(numericBalance);
+        // adds the balance to the total balance
+        totalBalance += balanceNumber;
+    }
+    // gives you the total balance
+    return totalBalance;
+}
