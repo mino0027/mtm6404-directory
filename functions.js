@@ -46,3 +46,8 @@ function order(clients, property) {
     // gives you the total balance
     return totalBalance;
 } */
+// new correct method with arrow, keeping old code for future review.
+function total(clients) {
+    return clients.reduce((sum, client) => sum + parseFloat(client.balance.replace(/[^0-9.-]+/g,"")), 0);
+}
+// this i believe now finds the total for the clients, by using return and the arrows. this will return the sum of the balance of each client. it will redice the array to a single value. and it will put the string into a number and remove any characters like $.
