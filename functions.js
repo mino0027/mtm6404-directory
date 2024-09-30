@@ -68,3 +68,9 @@ function info(clients, index) {
 } */
 // this will filter the clients by the name that matches the query (our search). the filter method will return an array of elements that match the search. the arrow function will return the client that matches the query (our search).
 // there is also a issue with this filter/search function, I tried fixing the syntax but still getting a filter error// going to redo this section and delete it.
+//new code attempt
+
+function search(clients, query) {
+    console.log(clients);
+    return clients.filter(client => client.name.toLowerCase().includes(query.toLowerCase()));
+}
