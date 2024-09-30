@@ -54,7 +54,7 @@ function order(clients, property) {
 
 function total(clients) {
     return clients.reduce((sum, client) => sum + client.balance, 0);
-} // my issue was I was trying to replace the balance with a number, but the balance is already a number. so I just needed to add the balance to the sum. I also removed the parseFloat because it was not needed. I was basically trying to replace a number to become a number or believing it was a string like our codepen.
+} // my issue was I was trying to replace the balance with a number, but the balance is already a number. so I just needed to add the balance to the sum. I also removed the parseFloat because it was not needed. I was basically trying to replace a number to become a number or believing it was a string like our codepen assignment.
 
 //Create an info function. It will take one argument (a number matching the index of the desired client) and return an object containing the desired clients information. The find() method with an arrow function should be used.
 function info(clients, index) {
