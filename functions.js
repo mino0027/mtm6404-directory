@@ -70,7 +70,7 @@ function info(clients, index) {
 // there is also a issue with this filter/search function, I tried fixing the syntax but still getting a filter error// going to redo this section and delete it.
 //new code attempt
 
-function search(clients, query) {
-    console.log(clients);
+function search(query) {
     return clients.filter(client => client.name.toLowerCase().includes(query.toLowerCase()));
-}
+  }
+//i believe, if I understand my error and solution correctly, I was going function search (clients, query) which meant I was disregarding the first instruction line "It will take one argument (a string containing the search query)". This meant I was not realizing I was immedieatly calling on two arugments and the clients which was trying to define the clients and causing issues. I believe Directory functions as intended now.
