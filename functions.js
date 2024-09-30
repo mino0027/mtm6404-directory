@@ -47,9 +47,9 @@ function order(clients, property) {
     return totalBalance;
 } */
 // new correct method with arrow, keeping old code for future review.
-function total(clients) {
+/* function total(clients) {
     return clients.reduce((sum, client) => sum + parseFloat(client.balance.replace(/[^0-9.-]+/g,"")), 0);
-}
+} */
 
 // I believe this is the issue with the code.
 
