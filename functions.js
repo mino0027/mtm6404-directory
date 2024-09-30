@@ -51,3 +51,9 @@ function total(clients) {
     return clients.reduce((sum, client) => sum + parseFloat(client.balance.replace(/[^0-9.-]+/g,"")), 0);
 }
 // this i believe now finds the total for the clients, by using return and the arrows. this will return the sum of the balance of each client. it will redice the array to a single value. and it will put the string into a number and remove any characters like $.
+
+//Create an info function. It will take one argument (a number matching the index of the desired client) and return an object containing the desired clients information. The find() method with an arrow function should be used.
+function info(clients, index) {
+    return clients.find(client => client.index === index);
+} // this will find the client that matches the index that is given. by using the find method and the arrow function. the find method returns the first element that matches the index. the arrow function will then return client that matches the index.
+
