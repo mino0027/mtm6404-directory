@@ -50,7 +50,8 @@ function order(clients, property) {
 function total(clients) {
     return clients.reduce((sum, client) => sum + parseFloat(client.balance.replace(/[^0-9.-]+/g,"")), 0);
 }
-// this i believe now finds the total for the clients, by using return and the arrows. this will return the sum of the balance of each client. it will redice the array to a single value. and it will put the string into a number and remove any characters like $.
+
+// I believe this is the issue with the code.
 
 //Create an info function. It will take one argument (a number matching the index of the desired client) and return an object containing the desired clients information. The find() method with an arrow function should be used.
 function info(clients, index) {
@@ -60,3 +61,4 @@ function info(clients, index) {
 function search(clients, query) {
     return clients.filter(client => client.name.toLowerCase().includes(query.toLowerCase()));
 } // this will filter the clients by the name that matches the query (our search). the filter method will return an array of elements that match the search. the arrow function will return the client that matches the query (our search).
+
