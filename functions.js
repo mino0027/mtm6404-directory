@@ -57,3 +57,6 @@ function info(clients, index) {
     return clients.find(client => client.index === index);
 } // this will find the client that matches the index that is given. by using the find method and the arrow function. the find method returns the first element that matches the index. the arrow function will then return client that matches the index.
 
+function search(clients, query) {
+    return clients.filter(client => client.name.toLowerCase().includes(query.toLowerCase()));
+} // this will filter the clients by the name that matches the query (our search). the filter method will return an array of elements that match the search. the arrow function will return the client that matches the query (our search).
