@@ -50,8 +50,11 @@ function order(clients, property) {
 /* function total(clients) {
     return clients.reduce((sum, client) => sum + parseFloat(client.balance.replace(/[^0-9.-]+/g,"")), 0);
 } */
-
 // I believe this is the issue with the code.
+
+function total(clients) {
+    return clients.reduce((sum, client) => sum + client.balance, 0);
+} // my issue was I was trying to replace the balance with a number, but the balance is already a number. so I just needed to add the balance to the sum. I also removed the parseFloat because it was not needed. I was basically trying to replace a number to become a number or believing it was a string like our codepen.
 
 //Create an info function. It will take one argument (a number matching the index of the desired client) and return an object containing the desired clients information. The find() method with an arrow function should be used.
 function info(clients, index) {
@@ -59,8 +62,9 @@ function info(clients, index) {
 } // this will find the client that matches the index that is given. by using the find method and the arrow function. the find method returns the first element that matches the index. the arrow function will then return client that matches the index.
 
 //  Create an search function. It will take one argument (a string containing the search query) and return an array of clients that includes the query in their name. The filter() method with an arrow function should be used. Hint: To avoid issues with case, use toLowerCase() on the query and client's name.
-function search(client, query) {
-    return client.filter(client => client.name.toLowerCase().includes(query.toLowerCase()));
-} 
+
+/* function search(clients, query) {
+    return clients.filter(client => clients.name.toLowerCase().includes(query.toLowerCase()));
+} */
 // this will filter the clients by the name that matches the query (our search). the filter method will return an array of elements that match the search. the arrow function will return the client that matches the query (our search).
-// there is also a issue with this filter/search function, I tried fixing the syntax but still getting a filter error.
+// there is also a issue with this filter/search function, I tried fixing the syntax but still getting a filter error// going to redo this section and delete it.
